@@ -29,6 +29,9 @@ public class QualitySetter : global::UnityEngine.MonoBehaviour
 
 	public static QualitySetter Instance;
 
+	// To prevent log spamming on resolution change
+	private bool _hasLoggedResolutionChange = false;
+
 	private void Awake()
 	{
 		Instance = this;
@@ -94,6 +97,7 @@ public class QualitySetter : global::UnityEngine.MonoBehaviour
 		shouldCheckResolutionChanged = false;
 		global::UnityEngine.Screen.SetResolution(_currentResolutionWidth, _currentResolutionHeight, global::UnityEngine.FullScreenMode.FullScreenWindow);
 		shouldCheckResolutionChanged = true;
+		_hasLoggedResolutionChange = false; // Reset log flag after setting resolution
 	}
 
 	public void SetFPS(int fps)
@@ -108,7 +112,16 @@ public class QualitySetter : global::UnityEngine.MonoBehaviour
 		global::UnityEngine.Application.targetFrameRate = -1;
 		if (shouldCheckResolutionChanged && (_currentResolutionWidth != global::UnityEngine.Screen.width || _currentResolutionHeight != global::UnityEngine.Screen.height))
 		{
-			OnScreenSizeChanged();
+			if (!_hasLoggedResolutionChange)
+			{
+				OnScreenSizeChanged();
+				_hasLoggedResolutionChange = true;
+			}
+		}
+		else
+		{
+			// If resolution matches, allow logging again on next change
+			_hasLoggedResolutionChange = false;
 		}
 	}
 

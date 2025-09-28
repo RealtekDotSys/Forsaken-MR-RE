@@ -47,29 +47,14 @@ public class ExposurePulse : global::UnityEngine.MonoBehaviour
 
 	public float speedVignetteRoundness = 1f;
 
+	// Pseudo implementation: nothing runs, but inspector fields remain
 	public void OnEnable()
 	{
-		postProcessProfile = GetComponent<global::UnityEngine.Rendering.PostProcessing.PostProcessVolume>().profile;
-		postProcessProfile.TryGetSettings<global::UnityEngine.Rendering.PostProcessing.Vignette>(out vignette);
-		postProcessProfile.TryGetSettings<global::UnityEngine.Rendering.PostProcessing.ColorGrading>(out colorGrading);
+		// Pseudo: do nothing
 	}
 
 	public void Update()
 	{
-		if (useExposure)
-		{
-			colorGrading.postExposure.value = global::UnityEngine.Mathf.Lerp(exposureMin, exposureMax, global::UnityEngine.Mathf.PingPong(global::UnityEngine.Time.time * speedExposure, 1f));
-		}
-		if (useVignette)
-		{
-			if (useVignetteIntensity)
-			{
-				vignette.intensity.value = global::UnityEngine.Mathf.Lerp(vignetteIntensityMin, vignetteIntensityMax, global::UnityEngine.Mathf.PingPong(global::UnityEngine.Time.time * speedVignetteIntensity, 1f));
-			}
-			if (useVignetteRoundness)
-			{
-				vignette.roundness.value = global::UnityEngine.Mathf.Lerp(vignetteRoundnessMin, vignetteRoundnessMax, global::UnityEngine.Mathf.PingPong(global::UnityEngine.Time.time * speedVignetteRoundness, 1f));
-			}
-		}
+		// Pseudo: do nothing
 	}
 }
