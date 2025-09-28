@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Roboto-Regular_SDF
   m_EditorClassIdentifier:
   hashCode: 2003488498
-  material: {fileID: 2100000, guid: 0f24926cf69f47541a6c9aeba3fc0d40, type: 2}
+  material: {fileID: 2100000, guid: 6207d4314506cae4e8cd66c901380a3e, type: 2}
   materialHashCode: -336198126
   m_Version: 1.1.0
   m_SourceFontFileGUID: 763e056b9480d6c4082cf48beb15ec29
@@ -1906,7 +1906,7 @@ MonoBehaviour:
     m_GlyphIndex: 399
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: 0580298fbef93dd419ab7387a7241490, type: 3}
+  - {fileID: 2800000, guid: f6e4f90342e3f184d821289ed65d9c28, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

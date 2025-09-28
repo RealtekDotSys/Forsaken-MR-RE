@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: auto_digital SDF
   m_EditorClassIdentifier:
   hashCode: 826262139
-  material: {fileID: 2100000, guid: 8020faac0fc88254f929a930688bafe0, type: 2}
+  material: {fileID: 2100000, guid: 438ac707d293c1942ad5c640d55d5a0a, type: 2}
   materialHashCode: 1732718843
   m_Version: 1.1.0
   m_SourceFontFileGUID: 40d04541ababf134c94ec9cbde1c1868
@@ -1849,7 +1849,7 @@ MonoBehaviour:
     m_GlyphIndex: 127
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: a059f5e635abb4f459da30b7036bdb99, type: 3}
+  - {fileID: 2800000, guid: 2f5c196cd434b484bb60ad3f4d944047, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

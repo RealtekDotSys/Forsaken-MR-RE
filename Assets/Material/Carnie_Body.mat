@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Carnie_Body
-  m_Shader: {fileID: 4800000, guid: 08f61434f2b7b55409c4104673f04f18, type: 3}
+  m_Shader: {fileID: 4800000, guid: 120efc493d49625419be5241f7772696, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,39 +24,39 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
       _Base_Albedo:
-        m_Texture: {fileID: 2800000, guid: f955171433d3cee43b5e9e70cb3a8834, type: 3}
+        m_Texture: {fileID: 2800000, guid: 83171fe7d5aab244d8e1689cadb57a09, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _Base_Emission:
-        m_Texture: {fileID: 2800000, guid: 729b23fdf343e9a499d45e39ba50a565, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2a000dee98c0fb14fa9a7431df3cd872, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _Base_MRAC:
-        m_Texture: {fileID: 2800000, guid: 7b171ff6fdb68c440b3283ff8c8975a5, type: 3}
+        m_Texture: {fileID: 2800000, guid: e92caeb15f75f084293172ca991826c9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _Base_Normal:
-        m_Texture: {fileID: 2800000, guid: dfd93bda20303f54f9ca650097c821bf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 672ae2cbc8dcaa64eb07ca007b8dd84e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _Grunge01:
-        m_Texture: {fileID: 2800000, guid: dc25f411aedc60141ba90bbf028a90a6, type: 3}
+        m_Texture: {fileID: 2800000, guid: d9fe5edafc38e3e42bed724c080f7c5a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _MRAC:
-        m_Texture: {fileID: 2800000, guid: dbd0d5e9c180e1f4ea739314c80d5307, type: 3}
+        m_Texture: {fileID: 2800000, guid: bc46ee4f340ecaa4d93f20b546804c17, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _PaintsAlbedoTex:
-        m_Texture: {fileID: 2800000, guid: 7be5851371221f64982605d99559e1d0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5497d533b9453c243ace927a539dcc63, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _PaintsEmissiveTex:
-        m_Texture: {fileID: 2800000, guid: 729b23fdf343e9a499d45e39ba50a565, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2a000dee98c0fb14fa9a7431df3cd872, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _PaintsNormalTex:
-        m_Texture: {fileID: 2800000, guid: 748095de4cee1ca4db06e16ce5322202, type: 3}
+        m_Texture: {fileID: 2800000, guid: f7760cb9152864c448d976dd257d4fbe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _VertDisplacementMask:

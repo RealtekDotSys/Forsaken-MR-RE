@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ReportsScreen
   m_EditorClassIdentifier:
   settings:
-  - {fileID: 114459472408008126}
-  - {fileID: 114125443874646091}
---- !u!114 &114459472408008126
+  - {fileID: 114199003417560891}
+  - {fileID: 114961924152125566}
+--- !u!114 &114199003417560891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
   opacity:
     overrideState: 0
     value: 1
---- !u!114 &114125443874646091
+--- !u!114 &114961924152125566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

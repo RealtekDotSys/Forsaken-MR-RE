@@ -27,7 +27,7 @@ Sprite:
   m_SpriteAtlas: {fileID: 0}
   m_RD:
     serializedVersion: 3
-    texture: {fileID: 2800000, guid: c6f379cdb7d2cc94bab421f1aa14c992, type: 3}
+    texture: {fileID: 2800000, guid: 99c76d9bcb0680440acc5b4d71a9d847, type: 3}
     alphaTexture: {fileID: 0}
     secondaryTextures: []
     m_SubMeshes:

@@ -19,14 +19,14 @@ MonoBehaviour:
   renderPipeline: 0
   forceSinglePass: 0
   renderingMode: 0
-  beamShader1Pass: {fileID: 4800000, guid: bc26c98024191104c9e1370064a2b038, type: 3}
-  beamShader2Pass: {fileID: 4800000, guid: 02074e8bbef19894581e2ab750224f74, type: 3}
+  beamShader1Pass: {fileID: 4800000, guid: beec1a0b73bd59b4ca6e69caea61c838, type: 3}
+  beamShader2Pass: {fileID: 4800000, guid: 2370243937dbaf244a4033eedab24002, type: 3}
   sharedMeshSides: 24
   sharedMeshSegments: 5
   globalNoiseScale: 0.5
   globalNoiseVelocity: {x: 0.07, y: 0.18, z: 0.05}
   fadeOutCameraTag: MainCamera
-  noise3DData: {fileID: 4900000, guid: a1985211500902a4c9faa2800e241f11, type: 3}
+  noise3DData: {fileID: 4900000, guid: 9e4010a39f568e343b598ffc02be6f3d, type: 3}
   noise3DSize: 64
-  dustParticlesPrefab: {fileID: 198919649697704491, guid: d37e4bca532e2e942a3416b0c3333dab, type: 2}
+  dustParticlesPrefab: {fileID: 198027456638582742, guid: be7e07b9bb8629f45a07deff3d9d1a77, type: 2}
   pluginVersion: 1700

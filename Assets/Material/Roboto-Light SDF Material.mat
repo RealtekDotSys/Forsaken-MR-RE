@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Roboto-Light SDF Material
-  m_Shader: {fileID: 4800000, guid: 2c00d4924729b4c4d90e1a39278799b7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4d21f4f46bb21a44490526933a27b2e6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5fe8f3d32037b5c4785c9a1e9d7f07c7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2da7258848e1d3e4d899babc7db1ceb7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _OutlineTex:

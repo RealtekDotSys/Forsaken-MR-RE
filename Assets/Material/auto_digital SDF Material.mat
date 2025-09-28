@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: auto_digital SDF Material
-  m_Shader: {fileID: 4800000, guid: 2c00d4924729b4c4d90e1a39278799b7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4d21f4f46bb21a44490526933a27b2e6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _MainTex:
-        m_Texture: {fileID: 2800000, guid: a059f5e635abb4f459da30b7036bdb99, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2f5c196cd434b484bb60ad3f4d944047, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _OutlineTex:

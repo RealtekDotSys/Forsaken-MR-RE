@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Carnie_Eyes
-  m_Shader: {fileID: 4800000, guid: e64e1f91e1fa85145b153c2f8d429a51, type: 3}
+  m_Shader: {fileID: 4800000, guid: 3575a3f57b3e9ca43a253cb2615f106b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -25,19 +25,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
       _ColorationTex:
-        m_Texture: {fileID: 2800000, guid: 7bb2115cc88dc2a49adefc7042ec87c3, type: 3}
+        m_Texture: {fileID: 2800000, guid: b8310ef2648f429479c533603a9b83b3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _GrungeTex:
-        m_Texture: {fileID: 2800000, guid: 3daa352b89cad2a45952f2ff59ef158b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 380fc507b80f0e441808a04f7547b1da, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _IrisTex:
-        m_Texture: {fileID: 2800000, guid: c2976ec757a52af4090fa8d6d93d4fe6, type: 3}
+        m_Texture: {fileID: 2800000, guid: fd3f6506312d8564387a9d6755258f58, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _PupilTex:
-        m_Texture: {fileID: 2800000, guid: e6d8e0c5168cf5d40a7fc154439af16f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 88c6ae6892ef66e49a7837b65dfa357e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _texcoord:

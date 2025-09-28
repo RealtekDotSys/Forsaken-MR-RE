@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Roboto-Light_SDF
   m_EditorClassIdentifier:
   hashCode: 2119632630
-  material: {fileID: 2100000, guid: f642d2dd81cbd62408b516e54fb3390d, type: 2}
+  material: {fileID: 2100000, guid: 8ebfb26e59c44024c902331a01be5204, type: 2}
   materialHashCode: -1423159658
   m_Version: 1.1.0
   m_SourceFontFileGUID: 0b912311b567ee54881c69a77138e775
@@ -1906,7 +1906,7 @@ MonoBehaviour:
     m_GlyphIndex: 399
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: 5fe8f3d32037b5c4785c9a1e9d7f07c7, type: 3}
+  - {fileID: 2800000, guid: 2da7258848e1d3e4d899babc7db1ceb7, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

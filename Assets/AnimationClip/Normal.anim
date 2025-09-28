@@ -141,9 +141,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 46580c53c12691d46a03fa79cbaa7d9d, type: 2}
+      value: {fileID: 21300000, guid: 1f27e877438c7d744a910b9a828b05c8, type: 2}
     - time: 0.016666668
-      value: {fileID: 21300000, guid: 46580c53c12691d46a03fa79cbaa7d9d, type: 2}
+      value: {fileID: 21300000, guid: 1f27e877438c7d744a910b9a828b05c8, type: 2}
     attribute: script_0x7822D856_UsmorHH
     path: ShockerIcon
     classID: 114
@@ -202,8 +202,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 46580c53c12691d46a03fa79cbaa7d9d, type: 2}
-    - {fileID: 21300000, guid: 46580c53c12691d46a03fa79cbaa7d9d, type: 2}
+    - {fileID: 21300000, guid: 1f27e877438c7d744a910b9a828b05c8, type: 2}
+    - {fileID: 21300000, guid: 1f27e877438c7d744a910b9a828b05c8, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

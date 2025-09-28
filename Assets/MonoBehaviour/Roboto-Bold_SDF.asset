@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Roboto-Bold_SDF
   m_EditorClassIdentifier:
   hashCode: -631000595
-  material: {fileID: 2100000, guid: fdf22378e4572364c8464b1cbeb6689b, type: 2}
+  material: {fileID: 2100000, guid: 5dc64f8d6ed36f54d9023981ef0509c6, type: 2}
   materialHashCode: -2051006931
   m_Version: 1.1.0
   m_SourceFontFileGUID: cd3eaf4a586e5e1419b0262f3e04d41b
@@ -1906,7 +1906,7 @@ MonoBehaviour:
     m_GlyphIndex: 399
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: 876efe5963f14a344938b1a20139e7e7, type: 3}
+  - {fileID: 2800000, guid: b4a70788603a59f41ad1d97d4c16da51, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

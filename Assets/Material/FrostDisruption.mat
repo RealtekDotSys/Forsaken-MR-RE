@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FrostDisruption
-  m_Shader: {fileID: 4800000, guid: 1510c2018baf4b842ab748eb1479e2b8, type: 3}
+  m_Shader: {fileID: 4800000, guid: 90cb2fb3b1922044ca38bb7fa76a3808, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,19 +24,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
       _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7cf24d9dbbef59547870fa37b3dd5dbc, type: 3}
+        m_Texture: {fileID: 2800000, guid: ee726c5ee3afca54bbb879415ff3c0b3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _NoisePattern:
-        m_Texture: {fileID: 2800000, guid: 70ad30e11ffdb424cb35819c61144053, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8f4f44147d0d38e4485edb9f00f49cb9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _OpacityGuide:
-        m_Texture: {fileID: 2800000, guid: 7826899b313118b489733d393da1af75, type: 3}
+        m_Texture: {fileID: 2800000, guid: aca61d07620764d4aa7120ea933fe3e0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _Pattern:
-        m_Texture: {fileID: 2800000, guid: 64ac97f8fec0d0048aa04bc39c7abe7c, type: 3}
+        m_Texture: {fileID: 2800000, guid: fe7ad7d442cdccb4fa5021307a16e2e0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _texcoord:

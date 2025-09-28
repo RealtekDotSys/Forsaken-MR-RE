@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Encounter Post Process MR
   m_EditorClassIdentifier:
   settings:
-  - {fileID: 114435685846302520}
-  - {fileID: 114245376189630352}
-  - {fileID: 114227351412523896}
-  - {fileID: 114669166711681832}
---- !u!114 &114435685846302520
+  - {fileID: 114015957562135015}
+  - {fileID: 114274844032626529}
+  - {fileID: 114783141389848236}
+  - {fileID: 114731341869317529}
+--- !u!114 &114015957562135015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 0
     value: 37.9
---- !u!114 &114245376189630352
+--- !u!114 &114274844032626529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1375,7 +1375,7 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
---- !u!114 &114227351412523896
+--- !u!114 &114783141389848236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1419,7 +1419,7 @@ MonoBehaviour:
   opacity:
     overrideState: 0
     value: 1
---- !u!114 &114669166711681832
+--- !u!114 &114731341869317529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

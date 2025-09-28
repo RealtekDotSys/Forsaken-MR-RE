@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: LoadingScreen_PostFX_Profile
   m_EditorClassIdentifier:
   settings:
-  - {fileID: 114748316410134844}
-  - {fileID: 114872722329554086}
-  - {fileID: 114910616191111942}
-  - {fileID: 114987654011889829}
-  - {fileID: 114562821027132553}
---- !u!114 &114748316410134844
+  - {fileID: 114332645831408573}
+  - {fileID: 114317984938909724}
+  - {fileID: 114797317122477771}
+  - {fileID: 114156660150089980}
+  - {fileID: 114441887071424029}
+--- !u!114 &114332645831408573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   fastMode:
     overrideState: 0
     value: 0
---- !u!114 &114872722329554086
+--- !u!114 &114317984938909724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1355,7 +1355,7 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
---- !u!114 &114910616191111942
+--- !u!114 &114797317122477771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1399,7 +1399,7 @@ MonoBehaviour:
   opacity:
     overrideState: 0
     value: 1
---- !u!114 &114987654011889829
+--- !u!114 &114156660150089980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1446,7 +1446,7 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 0
     value: 0
---- !u!114 &114562821027132553
+--- !u!114 &114441887071424029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

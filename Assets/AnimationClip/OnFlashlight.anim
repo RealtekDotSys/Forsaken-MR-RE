@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 9fc9f25c60ef2d4459da6b3c6655cff8, type: 2}
+      value: {fileID: 21300000, guid: d7a6d0eb53c86f542ac7cc46a0dc3e8a, type: 2}
     attribute: script_0x7822D856_UsmorHH
     path: FlashlightIconNew
     classID: 114
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 9fc9f25c60ef2d4459da6b3c6655cff8, type: 2}
+    - {fileID: 21300000, guid: d7a6d0eb53c86f542ac7cc46a0dc3e8a, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Distortion-Hole
-  m_Shader: {fileID: 4800000, guid: 23a7b7a5586977f4c88040d9c6bab529, type: 3}
+  m_Shader: {fileID: 4800000, guid: 022eeb2979803794cb325b2635343720, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,15 +24,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
       _Alpha:
-        m_Texture: {fileID: 2800000, guid: 3318d55bd4af0464080666d9a77a484f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 168533dafeb83044da9260768a6a2218, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _Grunge02:
-        m_Texture: {fileID: 2800000, guid: e9739c14f73539340baf7fb1aea2143b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0a43f6f11c3ba2e49b61f290f539d780, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _Normal:
-        m_Texture: {fileID: 2800000, guid: 6a200fd3d3cdcc44d828f938200816fa, type: 3}
+        m_Texture: {fileID: 2800000, guid: 00b1f60ae075fea4da55bb6e374285d5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _texcoord:

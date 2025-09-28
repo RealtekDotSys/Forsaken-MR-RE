@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MapEntityCommonProfile
   m_EditorClassIdentifier:
   settings:
-  - {fileID: 114753606234670230}
---- !u!114 &114753606234670230
+  - {fileID: 114960330613109685}
+--- !u!114 &114960330613109685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
