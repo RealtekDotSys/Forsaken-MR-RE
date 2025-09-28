@@ -23,13 +23,13 @@ public class LoadingManager : global::UnityEngine.MonoBehaviour
 	[global::UnityEngine.SerializeField]
 	private global::UnityEngine.Animator loadingAnimator;
 
-	private const int BETA_VERSION = 18;
+	private const int BETA_VERSION = 19;
 
 	private void Start()
 	{
 		constantVariables = ConstantVariables.Instance;
-		masterdatadownloader = constantVariables.MasterDataDownloader;
-		_assetBundleDownloader = constantVariables.AssetBundleDownloader;
+		masterdatadownloader = constantVariables != null ? constantVariables.MasterDataDownloader : null;
+		_assetBundleDownloader = constantVariables != null ? constantVariables.AssetBundleDownloader : null;
 	}
 
 	public void Login()
@@ -54,20 +54,78 @@ public class LoadingManager : global::UnityEngine.MonoBehaviour
 
 	private void OnSuccess(global::PlayFab.ClientModels.LoginResult result)
 	{
+		// Defensive null checks to prevent NullReferenceException
+		if (result == null)
+		{
+			global::UnityEngine.Debug.LogError("LoginResult is null in OnSuccess.");
+			OnError(new global::PlayFab.PlayFabError { ErrorMessage = "LoginResult is null" });
+			return;
+		}
+
+		if (result.AuthenticationContext == null)
+		{
+			global::UnityEngine.Debug.LogError("AuthenticationContext is null in LoginResult.");
+			OnError(new global::PlayFab.PlayFabError { ErrorMessage = "AuthenticationContext is null" });
+			return;
+		}
+
 		ServerDomain.AuthContext = result.AuthenticationContext;
 		ServerDomain.IllumixAuthContext = new IllumixAuthenticationContext(result.AuthenticationContext);
+
 		global::UnityEngine.Debug.Log("Successfully Logged In To PlayFab!");
 		global::UnityEngine.Debug.Log(result.PlayFabId);
-		playerID.text = "PlayerID: " + result.PlayFabId;
-		playerID.gameObject.SetActive(value: true);
-		GetTitleData();
+
+		if (playerID != null)
+		{
+			playerID.text = "PlayerID: " + result.PlayFabId;
+			if (playerID.gameObject != null)
+			{
+				playerID.gameObject.SetActive(value: true);
+			}
+			else
+			{
+				global::UnityEngine.Debug.LogWarning("playerID.gameObject is null in OnSuccess.");
+			}
+		}
+		else
+		{
+			global::UnityEngine.Debug.LogWarning("playerID is null in OnSuccess.");
+		}
+
+		// Set the PlayFab display name to "XERA UNITY PROJECT"
+		var updateRequest = new global::PlayFab.ClientModels.UpdateUserTitleDisplayNameRequest
+		{
+			DisplayName = "XERA UNITY PROJECT"
+		};
+		global::PlayFab.PlayFabClientAPI.UpdateUserTitleDisplayName(updateRequest,
+			(updateResult) => {
+				global::UnityEngine.Debug.Log("Display name set to XERA UNITY PROJECT");
+				GetTitleData();
+			},
+			(error) => {
+				global::UnityEngine.Debug.LogWarning("Failed to set display name: " + error.GenerateErrorReport());
+				GetTitleData();
+			}
+		);
 	}
 
 	private void OnError(global::PlayFab.PlayFabError error)
 	{
 		global::UnityEngine.Debug.LogError("PlayFab Error.");
-		global::UnityEngine.Debug.LogError(error.GenerateErrorReport());
-		MasterDomain.GetDomain().ServerDomain.networkAvailabilityChecker.UpdatedConnection(connection: false);
+		if (error != null)
+			global::UnityEngine.Debug.LogError(error.GenerateErrorReport());
+		else
+			global::UnityEngine.Debug.LogError("PlayFabError is null in OnError.");
+
+		var domain = MasterDomain.GetDomain();
+		if (domain != null && domain.ServerDomain != null && domain.ServerDomain.networkAvailabilityChecker != null)
+		{
+			domain.ServerDomain.networkAvailabilityChecker.UpdatedConnection(connection: false);
+		}
+		else
+		{
+			global::UnityEngine.Debug.LogWarning("NetworkAvailabilityChecker is null in OnError.");
+		}
 	}
 
 	private void GetTitleData()
@@ -77,25 +135,72 @@ public class LoadingManager : global::UnityEngine.MonoBehaviour
 
 	private void OnTitleDataReceived(global::PlayFab.ClientModels.GetTitleDataResult result)
 	{
-		if (int.Parse(result.Data["PrivateBetaOpen"]) != 18)
+		if (result == null || result.Data == null)
 		{
+			global::UnityEngine.Debug.LogError("GetTitleDataResult or its Data is null in OnTitleDataReceived.");
+			OnError(new global::PlayFab.PlayFabError { ErrorMessage = "GetTitleDataResult or Data is null" });
+			return;
+		}
+
+		int privateBetaOpen = 0;
+		if (!result.Data.ContainsKey("PrivateBetaOpen") || !int.TryParse(result.Data["PrivateBetaOpen"], out privateBetaOpen))
+		{
+			global::UnityEngine.Debug.LogWarning("PrivateBetaOpen key missing or invalid in title data.");
+		}
+
+		if (privateBetaOpen != BETA_VERSION)
+		{
+			global::UnityEngine.Debug.LogWarning("PrivateBetaOpen version is " + privateBetaOpen + " (expected " + BETA_VERSION + ")");
 			if (betaClosed != null)
 			{
 				betaClosed.SetActive(value: true);
 			}
-			return;
+			else
+			{
+				global::UnityEngine.Debug.LogWarning("betaClosed GameObject is null in OnTitleDataReceived.");
+			}
+			// Continue anyway
 		}
-		PlayFabMasterdataVersion = int.Parse(result.Data["MasterDataVersion"]);
-		PlayFabTOC = result.Data["TOC"];
-		PlayFabDownloadURI = result.Data["DownloadURI"];
+
+		if (result.Data.ContainsKey("MasterDataVersion"))
+			int.TryParse(result.Data["MasterDataVersion"], out PlayFabMasterdataVersion);
+		else
+			global::UnityEngine.Debug.LogWarning("MasterDataVersion key missing in title data.");
+
+		if (result.Data.ContainsKey("TOC"))
+			PlayFabTOC = result.Data["TOC"];
+		else
+			global::UnityEngine.Debug.LogWarning("TOC key missing in title data.");
+
+		if (result.Data.ContainsKey("DownloadURI"))
+			PlayFabDownloadURI = result.Data["DownloadURI"];
+		else
+			global::UnityEngine.Debug.LogWarning("DownloadURI key missing in title data.");
+
 		global::UnityEngine.Debug.Log("PlayFabMasterDataVersion = " + PlayFabMasterdataVersion);
 		global::UnityEngine.Debug.Log("PlayFabDownloadURI = " + PlayFabDownloadURI);
-		constantVariables.DownloadURI = PlayFabDownloadURI;
+
+		if (constantVariables != null)
+			constantVariables.DownloadURI = PlayFabDownloadURI;
+		else
+			global::UnityEngine.Debug.LogWarning("constantVariables is null in OnTitleDataReceived.");
+
 		LoadStage1();
 	}
 
 	public void LoadStage1()
 	{
+		if (constantVariables == null)
+		{
+			global::UnityEngine.Debug.LogError("constantVariables is null in LoadStage1.");
+			return;
+		}
+		if (masterdatadownloader == null)
+		{
+			global::UnityEngine.Debug.LogError("masterdatadownloader is null in LoadStage1.");
+			return;
+		}
+
 		if (constantVariables.UseStreamingAssets)
 		{
 			global::UnityEngine.Debug.Log("StreamingAssets active, Asked for new masterdata!");
@@ -119,6 +224,17 @@ public class LoadingManager : global::UnityEngine.MonoBehaviour
 
 	public bool IsPLISTDataNull()
 	{
+		if (masterdatadownloader == null)
+		{
+			global::UnityEngine.Debug.LogError("masterdatadownloader is null in IsPLISTDataNull.");
+			return true;
+		}
+		if (masterdatadownloader.masterDataSections == null)
+		{
+			global::UnityEngine.Debug.LogError("masterdatadownloader.masterDataSections is null in IsPLISTDataNull.");
+			return true;
+		}
+
 		foreach (MasterDataDownloadCacheDeserialize.MasterDataDownloadInfo key in masterdatadownloader.masterDataSections.Keys)
 		{
 			if (!global::UnityEngine.PlayerPrefs.HasKey(key.MasterDataType.ToString()))
@@ -140,6 +256,18 @@ public class LoadingManager : global::UnityEngine.MonoBehaviour
 		global::UnityEngine.Debug.Log("Load thinks masterdata is deserialized!");
 		global::UnityEngine.PlayerPrefs.SetString("TOC", PlayFabTOC);
 		global::UnityEngine.PlayerPrefs.Save();
+
+		if (constantVariables == null)
+		{
+			global::UnityEngine.Debug.LogError("constantVariables is null in LoadStage2.");
+			return;
+		}
+		if (_assetBundleDownloader == null)
+		{
+			global::UnityEngine.Debug.LogError("_assetBundleDownloader is null in LoadStage2.");
+			return;
+		}
+
 		if (constantVariables.UseStreamingAssets)
 		{
 			global::UnityEngine.PlayerPrefs.SetInt("MasterDataVersion", 0);
@@ -154,11 +282,26 @@ public class LoadingManager : global::UnityEngine.MonoBehaviour
 
 	public void LoadComplete()
 	{
-		loadingAnimator.SetTrigger("Complete");
+		if (loadingAnimator != null)
+		{
+			loadingAnimator.SetTrigger("Complete");
+		}
+		else
+		{
+			global::UnityEngine.Debug.LogWarning("loadingAnimator is null in LoadComplete.");
+		}
 	}
 
 	public void WarningEnded()
 	{
-		MasterDomain.GetDomain().TheGameDomain.gameDisplayChanger.RequestDisplayChange(GameDisplayData.DisplayType.map);
+		var domain = MasterDomain.GetDomain();
+		if (domain != null && domain.TheGameDomain != null && domain.TheGameDomain.gameDisplayChanger != null)
+		{
+			domain.TheGameDomain.gameDisplayChanger.RequestDisplayChange(GameDisplayData.DisplayType.map);
+		}
+		else
+		{
+			global::UnityEngine.Debug.LogWarning("gameDisplayChanger is null in WarningEnded.");
+		}
 	}
 }
